@@ -1,7 +1,7 @@
 import re
 import os
-
 import config
+
 from operation_filter import opFilter
 
 class RepertoireOutput:
@@ -12,7 +12,7 @@ class RepertoireOutput:
         #         ((fileIdx, startLine, endLine), (fileIdx, startLine, endLine))
         self.clones = {}
 
-    def loadFromFile(self, input_path,isRep=0):
+    def loadFromFile(self, input_path, isRep=0):
         reading_indices = False
         reading_clones = False
         rseparator = re.compile("[.-]")
@@ -188,4 +188,3 @@ class RepertoireOutput:
 
     def getCloneIter(self):
         return self.clones.iteritems()
-
